@@ -1,0 +1,93 @@
+/* coded by dead inside */
+
+.lc-header {
+  background-image: url("../image/header.png");
+  background-repeat: no-repeat;
+  background-size: 98.92% auto;
+  background-position: left 10% calc(50% - 1400px/2);
+  height: 90%;
+  position: fixed;
+  top: 19.5%;
+  left: 0.9%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: 5;
+}
+
+.lovemeet-header {
+  background-image: url("../image/lovemeetheader.png");
+  background-repeat: no-repeat;
+  background-size: 98.92% auto;
+  background-position: left 10% calc(50% - 1400px/2);
+  height: 90%;
+  position: fixed;
+  top: 19.5%;
+  left: 0.9%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: 5;
+}
+
+.ads {
+  height: 90%;
+  position: fixed;
+  top: 42.5%;
+  left: 60%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: 40;
+}
+
+.projectlead {
+  background-image: url("../image/team.png");
+  background-repeat: no-repeat;
+  background-size: 65.92% auto;
+  background-position: left 10% calc(50% - 1400px/2);
+  height: 90%;
+  position: fixed;
+  top: 39%;
+  left: 0.9%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: 30;
+}
+
+.yilmaz {
+    position: relative;
+    display: inline-block;
+    width: 19.5%;
+    height: 50%;
+    background-image: url("../image/yilmaz.png");
+    background-repeat: no-repeat;
+    background-size: 20.92% auto;
+    background-position: left 10% calc(50% - 1400px/2);
+    position: fixed;
+    top: 42%;
+    left: 4.9%;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 30;
+    background-image: url('../image/yilmaz.png');
+    background-size: cover;
+    cursor: pointer;
+}
+
+.yilmaz-text {
+  background-image: url("../image/yilmaztext.png");
+  background-repeat: no-repeat;
+  background-size: 65.92% auto;
+  background-position: left 10% calc(50% - 1400px/2);
+  height: 70%;
+  position: fixed;
+  top: 42%;
+  left: 6.9%;
+  width: 70%;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: 30;
+  overflow: auto;
+}

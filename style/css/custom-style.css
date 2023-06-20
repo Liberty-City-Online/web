@@ -1,0 +1,234 @@
+/* coded by dead inside */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: DINMittelschriftStd;
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+  background-image: url("../image/bg-img.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  cursor: url('../cursor/CursorsXP.cur'), auto;
+}
+
+.selection-box {
+  border: 2px dashed #0000ff;
+  background-color: rgba(0, 0, 255, 0.1);
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+  display: none;
+  overflow: hidden; /* taşmayı önlemek için */
+}
+
+.bg-drag {
+  position: relative;
+  width: 99.9%;
+  height: 99.8vh; /* "vh" yazım hatasıydı, "100vh" olarak değiştirdim */
+  overflow: hidden; /* taşmayı önlemek için */
+}
+
+a[href] {
+  cursor: url('../cursor/Cursor_15.cur'), pointer;
+}
+
+
+@font-face {
+    font-family: 'DINMittelschriftStd';
+    src: url('../font/DINMittelschriftStd.woff') format('woff');
+    font-weight: 500;
+}
+
+#popup-container {
+  position: fixed;
+  top: 55px;
+  left: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+#popup-text {
+  font-size: 18px;
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+  color: white;
+}
+
+.web-icon-container {
+  position: absolute;
+  top: 40%;
+  left: 42%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+}
+
+.web-icon-container img {
+  width: 140px;
+  height: 120px;
+  cursor: pointer;
+}
+
+.logout-icon-container {
+  position: absolute;
+  top: 80%;
+  left: 72%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+}
+
+.logout-icon-container img {
+  width: 130px;
+  height: 120px;
+  cursor: pointer;
+}
+
+.rightside {
+background-image: url("../image/side.png");
+background-repeat: repeat-y;
+background-size: 10% auto;
+height: 100vh;
+position: fixed;
+top: 0;
+right: 0;
+width: 10%; /* örnek değer: 30% /
+max-width: 1378px; / isteğe bağlı: 1378px'den daha büyük olmaması için */
+z-index: 0;
+}
+
+.leftside {
+background-image: url("../image/side.png");
+background-repeat: repeat-y;
+background-size: 1% auto;
+height: 100vh;
+position: fixed;
+top: 0;
+right: 0;
+width: 90%; /* örnek değer: 10% /
+max-width: 158px; / isteğe bağlı: 158px'den daha büyük olmaması için */
+z-index: -1;
+}
+
+.topbarpattern {
+background-image: url("../image/topbarpattern.png");
+background-repeat: repeat-x;
+background-size: 47% 19.5%;
+background-position: left 10% top;
+height: 100%;
+position: fixed;
+top: 0%;
+width: 80%;
+margin-left: 10%;
+margin-right: 10%;
+z-index: -2;
+}
+
+.pattern {
+  background-color: white;
+  background-repeat: repeat-x;
+  background-size: 100% auto;
+  background-position: left 10% calc(50% - 456px/2);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: -10;
+}
+
+.homebut {
+  background-image: url("../image/homebut.png");
+  background-repeat: no-repeat;
+  background-size: 5.5% auto;
+  width: 100%; /* Buton genişliği */
+  height: 9%; /* Buton yüksekliği */
+  position: fixed;
+  top: 7%; /* Butonun sayfanın üstündeki konumu */
+  left: 83%; /* Butonun sayfanın solundaki konumu */
+  z-index: 2;
+  padding: 1%; /* Butonun içeriği ile kenar arasındaki boşluk */
+  box-sizing: border-box; /* Buton boyutları kutunun içeriğine dahil edilir */
+}
+
+
+.mailbut {
+  background-image: url("../image/mailbutoff.png");
+  background-repeat: no-repeat;
+  background-size: 5.5% auto;
+  width: 100%; /* Buton genişliği */
+  height: 100%; /* Buton yüksekliği */
+  position: fixed;
+  top: 7%; /* Butonun sayfanın üstündeki konumu */
+  left: 77.3%; /* Butonun sayfanın solundaki konumu */
+  z-index: 1;
+  padding: 1%; /* Butonun içeriği ile kenar arasındaki boşluk */
+  box-sizing: border-box; /* Buton boyutları kutunun içeriğine dahil edilir */
+}
+
+
+.forbutoff {
+  background-image: url("../image/forbutoff.png");
+  background-repeat: no-repeat;
+  background-size: 4.16% auto;
+  width: 100%; /* Buton genişliği */
+  height: 100%; /* Buton yüksekliği */
+  position: fixed;
+  top: 7%; /* Butonun sayfanın üstündeki konumu */
+  left: 67.3%; /* Butonun sayfanın solundaki konumu */
+  z-index: 1;
+  padding: 1%; /* Butonun içeriği ile kenar arasındaki boşluk */
+  box-sizing: border-box; /* Buton boyutları kutunun içeriğine dahil edilir */
+}
+
+.backbutoff {
+  background-image: url("../image/backbutoff.png");
+  background-repeat: no-repeat;
+  background-size: 4.16% auto;
+  width: 100%; /* Buton genişliği */
+  height: 100%; /* Buton yüksekliği */
+  position: fixed;
+  top: 7%; /* Butonun sayfanın üstündeki konumu */
+  left: 63.3%; /* Butonun sayfanın solundaki konumu */
+  z-index: 1;
+  padding: 1%; /* Butonun içeriği ile kenar arasındaki boşluk */
+  box-sizing: border-box; /* Buton boyutları kutunun içeriğine dahil edilir */
+}
+
+.backbut {
+  background-image: url("../image/backbut.png");
+  background-repeat: no-repeat;
+  background-size: 4.16% auto;
+  width: 100%; /* Buton genişliği */
+  height: 9%; /* Buton yüksekliği */
+  position: fixed;
+  top: 7%; /* Butonun sayfanın üstündeki konumu */
+  left: 63.3%; /* Butonun sayfanın solundaki konumu */
+  z-index: 4;
+  padding: 1%; /* Butonun içeriği ile kenar arasındaki boşluk */
+  box-sizing: border-box; /* Buton boyutları kutunun içeriğine dahil edilir */
+}
+
+.searchbar {
+  background-image: url("../image/searchbar.png");
+  background-repeat: no-repeat;
+  background-size: 48% auto;
+  width: 100%; /* Buton genişliği */
+  height: 100%; /* Buton yüksekliği */
+  position: fixed;
+  top: 7%; /* Butonun sayfanın üstündeki konumu */
+  left: 13.3%; /* Butonun sayfanın solundaki konumu */
+  z-index: 1;
+  padding: 1%; /* Butonun içeriği ile kenar arasındaki boşluk */
+  box-sizing: border-box; /* Buton boyutları kutunun içeriğine dahil edilir */
+}
